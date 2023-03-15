@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header{
+    background-color: #5f27cd;
+    padding: 16px 0; /* espaçamento de 16 cima e baixo e 0 laterias */
+    color: #fff; /* cor da letra */
+    display: flex; /* botão ao lado do h1 */
+    border-bottom: 16px solid #341f97; /* cor da barra inferior */
+    justify-content:center;
+    text-transform: uppercase; /* deixando tudo em capslock*/
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px; /*espaçamento a esquerda do h1*/
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+form h2{
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding: 8px;
+}
+
+button{
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff; 
+}
+
+#botao-cancelar { /* estilizando apenas o botao de cancelar */
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* apos chegar no limite da tela ele vai criar outra linha */
+}
+
+ul li {
+    max-width: 25%; /* vai cada li vai ocupar 25% ou seja 4 por bloco */
+    list-style: none; /* tirando o pontinho da lista*/
+    position: relative; 
+    max-height: 260px;
+    overflow: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {  
+    padding: 16px;
+    background-color: rgba(0,0,0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* removendo a opacidade */
+    transition: all ease .5s;
+}
+
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none; /* tirando o underline*/
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1; /* Quando passar o mouse encima do link ele vai voltar a ter a opcidade 1 ou seja aparecendo */
+}
